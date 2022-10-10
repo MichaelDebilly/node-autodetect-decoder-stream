@@ -1,5 +1,5 @@
 {
-  "name": "autodetect-decoder-stream",
+  "name": "oswedev-autodetect-decoder-stream",
   "version": "2.0.2",
   "description": "An iconv-lite stream that autodetects the encoding and fallbacks to a specified fallback encoding.",
   "main": "index.js",

@@ -61,6 +61,15 @@ class AutoDetectDecoderStream extends Transform {
                     throw new Error('Not enough data, recognized as ASCII. We probably need to use the fallback.');
                 }
 
+                let available_encoding = [
+                    "utf8",
+                    "windows-1252"
+                ];
+
+                if (available_encoding.indexOf(this._detectedEncoding) == -1) {
+                    throw new Error("L'encodage " + this._detectedEncoding + " n'est pas supporté");
+                }
+
             } catch (e) {
 
                 // Fallback
