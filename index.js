@@ -63,10 +63,11 @@ class AutoDetectDecoderStream extends Transform {
 
                 let available_encoding = [
                     "utf8",
+                    "utf-8",
                     "windows-1252"
                 ];
 
-                if (available_encoding.indexOf(this._detectedEncoding) == -1) {
+                if (available_encoding.indexOf(this._detectedEncoding.toLowerCase()) == -1) {
                     throw new Error("L'encodage " + this._detectedEncoding + " n'est pas supporté");
                 }
 
